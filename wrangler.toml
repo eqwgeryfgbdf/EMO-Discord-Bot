@@ -1,0 +1,19 @@
+name = "emo-discord-bot"
+compatibility_date = "2024-01-01"
+main = "cloudflare-worker/src/index.ts"
+
+# D1 資料庫綁定
+[[d1_databases]]
+binding = "DB"
+database_name = "emo-discord-bot-db"
+database_id = "dad3977a-d5aa-41af-9366-63fd1616e290"
+
+# Workers KV 綁定
+[[kv_namespaces]]
+binding = "KV"
+id = "2d35fd88262d4f90a0d9a3de94ac47e7"
+
+# 環境變數
+[vars]
+NODE_ENV = "production"
+

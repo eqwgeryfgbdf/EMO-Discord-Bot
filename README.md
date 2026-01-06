@@ -148,7 +148,8 @@ uvicorn main:app --reload
 
 - [技术栈文档](./docs/TECH_STACK.md)
 - [开发指南](./docs/DEVELOPMENT.md)
-- [部署指南](./docs/DEPLOYMENT.md)
+- [架构文档](./docs/ARCHITECTURE.md)
+- [Cloudflare 设置指南](./docs/CLOUDFLARE_SETUP.md)
 
 ## 🤝 贡献
 
