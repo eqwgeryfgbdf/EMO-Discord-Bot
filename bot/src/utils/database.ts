@@ -27,8 +27,8 @@ export async function getGuildSettings(
  * 更新伺服器設定
  */
 export async function updateGuildSettings(
-  guildId: string,
-  settings: Partial<GuildSettings>
+  _guildId: string,
+  _settings: Partial<GuildSettings>
 ): Promise<boolean> {
   // TODO: 實現 Cloudflare D1 更新
   return true;
@@ -56,9 +56,9 @@ export async function getUserData(
  * 更新用戶資料
  */
 export async function updateUserData(
-  userId: string,
-  guildId: string,
-  data: Partial<UserData>
+  _userId: string,
+  _guildId: string,
+  _data: Partial<UserData>
 ): Promise<boolean> {
   // TODO: 實現 Cloudflare D1 更新
   return true;
@@ -68,11 +68,11 @@ export async function updateUserData(
  * 記錄審核日誌
  */
 export async function logAuditAction(
-  guildId: string,
-  userId: string,
-  action: string,
-  reason: string,
-  moderatorId: string
+  _guildId: string,
+  _userId: string,
+  _action: string,
+  _reason: string,
+  _moderatorId: string
 ): Promise<boolean> {
   // TODO: 實現 Cloudflare D1 插入
   return true;

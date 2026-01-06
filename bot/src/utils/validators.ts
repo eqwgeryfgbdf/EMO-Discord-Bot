@@ -1,4 +1,9 @@
-import { ChatInputCommandInteraction, Message } from 'discord.js';
+import {
+  ChatInputCommandInteraction,
+  Message,
+  PermissionFlagsBits,
+  PermissionsBitField,
+} from 'discord.js';
 
 /**
  * 驗證用戶是否有管理員權限
@@ -10,7 +15,16 @@ export function hasAdminPermission(
     return false;
   }
 
-  return interaction.member.permissions.has('Administrator');
+  const permissions =
+    interaction.member.permissions instanceof PermissionsBitField
+      ? interaction.member.permissions
+      : null;
+
+  if (!permissions) {
+    return false;
+  }
+
+  return permissions.has(PermissionFlagsBits.Administrator);
 }
 
 /**
@@ -24,7 +38,16 @@ export function hasPermission(
     return false;
   }
 
-  return interaction.member.permissions.has(permission);
+  const permissions =
+    interaction.member.permissions instanceof PermissionsBitField
+      ? interaction.member.permissions
+      : null;
+
+  if (!permissions) {
+    return false;
+  }
+
+  return permissions.has(permission);
 }
 
 /**

@@ -20,7 +20,7 @@ export const helpCommand: Command = {
         .setName('command')
         .setDescription('查看特定命令的詳細資訊')
         .setRequired(false)
-    ),
+    ) as SlashCommandBuilder,
 
   executeSlash: async (interaction: ChatInputCommandInteraction) => {
     const commandName = interaction.options.getString('command');
@@ -59,7 +59,7 @@ export const helpCommand: Command = {
     await interaction.reply({ embeds: [embed] });
   },
 
-  executePrefix: async (message: Message, args: string[]) => {
+  executePrefix: async (message: Message) => {
     const embed = new EmbedBuilder()
       .setTitle('📚 EMO Bot 命令列表')
       .setDescription('以下是可用的命令：')

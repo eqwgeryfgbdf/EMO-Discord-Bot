@@ -9,7 +9,7 @@ export const pingCommand: Command = {
   description: '測試 Bot 回應時間',
   data: new SlashCommandBuilder()
     .setName('ping')
-    .setDescription('測試 Bot 回應時間'),
+    .setDescription('測試 Bot 回應時間') as SlashCommandBuilder,
 
   executeSlash: async (interaction: ChatInputCommandInteraction) => {
     const sent = await interaction.reply({

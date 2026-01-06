@@ -2,7 +2,7 @@ import { Events, Message } from 'discord.js';
 import { logger } from '../utils/logger';
 import { commands } from '../commands';
 import { config } from '../config/config';
-import { hasAdminPermission, validateCommandArgs } from '../utils/validators';
+import { hasAdminPermission } from '../utils/validators';
 
 /**
  * 訊息建立事件處理器
